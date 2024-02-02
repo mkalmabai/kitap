@@ -2,4 +2,19 @@
     <string name="app_name">kitap</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="userlogininput">Введите ваш логин</string>
+    <string name="inputPassword">Bведите пароль</string>
+    <string name="login">Войти</string>
+    <string name="register">У меня еще нет аккаунта</string>
+    <string name="forgetpassword">Забыли пароль?</string>
+    <string name="register2">Регистрация</string>
+    <string name="inputmail">Введи адрес почты</string>
+    <string name="createUsername">Придумай логин</string>
+    <string name="createPassword">Создай пароль</string>
+    <string name="warningscharacters">От 8 до 15 символов</string>
+    <string name="warningSimpleword">Строчные и прописные буквы</string>
+    <string name="warningnumber">Минимум 1 цифра</string>
+    <string name="warningSpecialCharcter">Минимум 1 спецсимвол (!, \", #, $...)</string>
+    <string name="repeatPassword">Повтори пароль</string>
+    <string name="further">Далее</string>
 </resources>
