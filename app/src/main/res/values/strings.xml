@@ -17,4 +17,8 @@
     <string name="warningSpecialCharcter">Минимум 1 спецсимвол (!, \", #, $...)</string>
     <string name="repeatPassword">Повтори пароль</string>
     <string name="further">Далее</string>
+    <string name="main">Главная</string>
+    <string name="fov">Избранные</string>
+    <string name="chats">Чаты</string>
+    <string name="profile">Профиль</string>
 </resources>

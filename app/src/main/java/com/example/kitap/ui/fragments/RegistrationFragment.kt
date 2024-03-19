@@ -28,4 +28,5 @@ class RegistrationFragment : Fragment() {
             findNavController().navigateUp()
         }
     }
+
 }
