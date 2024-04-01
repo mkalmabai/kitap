@@ -46,17 +46,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/btnGoogleAuth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_gravity="center"
-                android:drawableStart="@drawable/google_logo"
-                android:padding="16dp"
-                android:text="Sign in with Google"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/google_sign_in"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/registerTitle" />
@@ -79,7 +74,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="50dp"
                 android:background="@drawable/background_edittext"
                 android:fontFamily="@font/medium"
                 android:hint="@string/inputmail"
@@ -87,7 +82,7 @@
                 android:paddingHorizontal="16dp"
                 android:singleLine="true"
                 android:textColorHint="@color/grey"
-                app:layout_constraintTop_toBottomOf="@+id/btnGoogleAuth"
+                app:layout_constraintTop_toBottomOf="@+id/google_sign_in"
                 tools:layout_editor_absoluteX="16dp" />
             <EditText
                 android:id="@+id/createUserName"
@@ -240,6 +235,16 @@
                 app:layout_constraintTop_toBottomOf="@+id/repeatPassword"
                 app:layout_constraintBottom_toBottomOf="parent"
                 tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/Or"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OR"
+                app:layout_constraintBottom_toTopOf="@+id/inputMail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/google_sign_in" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

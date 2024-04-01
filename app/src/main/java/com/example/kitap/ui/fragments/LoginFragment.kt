@@ -9,8 +9,10 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.kitap.R
 import com.example.kitap.databinding.FragmentLoginBinding
-import com.example.kitap.ui.MainActivity
+import com.example.kitap.ui.activites.MainActivity
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 
 class LoginFragment : Fragment() {
     private lateinit var binding: FragmentLoginBinding

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "171827503043",
+    "project_id": "kitap-9530d",
+    "storage_bucket": "kitap-9530d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171827503043:android:28fd467969c8c9a2cd6776",
+        "android_client_info": {
+          "package_name": "com.example.kitap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "171827503043-dem6numgv0h1abt1sitctui8o670ccfh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kitap",
+            "certificate_hash": "52a9d81f62ec26995e74280dca638b6dd3ea6eb0"
+          }
+        },
+        {
+          "client_id": "171827503043-6hcnps09krkodi6372lk1ouvtgjuqbak.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMzJ3_BqqAvqrE6oi15qQj3tw8Aa64ffg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "171827503043-6hcnps09krkodi6372lk1ouvtgjuqbak.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
