@@ -35,7 +35,6 @@ class RegistrationViewModel
     fun setGoogleSignInLauncher( launcher: ActivityResultLauncher<Intent>) {
         googleSignInLauncher = launcher
     }
-
     fun signInWithGoogle(activity:Activity) {
         _status.value = Resource.Loading()
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -47,7 +46,6 @@ class RegistrationViewModel
         val signInIntent = googleSignInClient.signInIntent
         googleSignInLauncher.launch(signInIntent)
     }
-
     fun handleGoogleSignInResult(data: Intent?) {
         val task = GoogleSignIn.getSignedInAccountFromIntent(data)
         try {
@@ -57,7 +55,6 @@ class RegistrationViewModel
             _status.value = Resource.Error("Google sign-in failed")
         }
     }
-
     private fun signInWithGoogle(account: GoogleSignInAccount) {
         val credential = GoogleAuthProvider.getCredential(account.idToken, null)
         CoroutineScope(Dispatchers.IO).launch {
@@ -73,4 +70,6 @@ class RegistrationViewModel
             }
         }
     }
+
+
 }
