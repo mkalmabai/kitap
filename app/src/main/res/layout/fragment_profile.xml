@@ -7,21 +7,21 @@
     android:background="@color/mainorange"
     tools:context=".ui.fragments.ProfileFragment">
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/profilebackbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="63dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/buttonback" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="82dp"
-        android:layout_height="82dp"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="68dp"
+        android:id="@+id/profileimage"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="55dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/profile" />
@@ -32,33 +32,37 @@
         android:layout_height="wrap_content"
         android:text="Марат Койшыбек"
         android:textStyle="bold"
-        android:fontFamily="@font/poppinslight"
+        android:fontFamily="@font/founetext"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/profileimage"
+        app:layout_constraintStart_toStartOf="@+id/profileimage"
+        app:layout_constraintTop_toBottomOf="@+id/profileimage" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/nameunderemail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="maratkoishybek"
         android:textColor="@color/white"
-        android:textSize="12sp"
+        android:textSize="15sp"
         android:fontFamily="@font/poppinslight"
         app:layout_constraintEnd_toEndOf="@+id/name"
         app:layout_constraintStart_toStartOf="@+id/name"
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profilemenu"
         android:layout_width="275dp"
         android:layout_height="52dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toBottomOf="@+id/nameunderemail">
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/changeProfileButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -67,35 +71,173 @@
             app:srcCompat="@drawable/ellipse" />
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/yourOrders"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageView7"
+            app:layout_constraintEnd_toStartOf="@+id/settingsButton"
             app:layout_constraintHorizontal_bias="0.45"
-            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintStart_toEndOf="@+id/changeProfileButton"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ellipse" />
 
         <ImageView
-            android:id="@+id/imageView7"
+            android:id="@+id/settingsButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="28dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageView8"
+            app:layout_constraintEnd_toStartOf="@+id/logoutButton"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ellipse" />
 
         <ImageView
-            android:id="@+id/imageView8"
+            android:id="@+id/logoutButton"
             android:layout_width="44dp"
             android:layout_height="44dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ellipse" />
+
+        <ImageView
+            android:id="@+id/pencil"
+            android:layout_width="24dp"
+            android:layout_height="22dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/changeProfileButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.533"
+            app:srcCompat="@drawable/pencil" />
+
+        <ImageView
+            android:id="@+id/orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/yourOrders"
+            app:layout_constraintStart_toStartOf="@+id/yourOrders"
+            app:layout_constraintTop_toTopOf="@+id/yourOrders"
+            app:srcCompat="@drawable/archive" />
+
+        <ImageView
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/settingsButton"
+            app:layout_constraintStart_toStartOf="@+id/settingsButton"
+            app:layout_constraintTop_toTopOf="@+id/settingsButton"
+            app:srcCompat="@drawable/setting" />
+
+        <ImageView
+            android:id="@+id/logOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/logoutButton"
+            app:layout_constraintEnd_toEndOf="@+id/logoutButton"
+            app:layout_constraintStart_toStartOf="@+id/logoutButton"
+            app:layout_constraintTop_toTopOf="@+id/logoutButton"
+            app:srcCompat="@drawable/in" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="460dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/yourname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginLeft="15dp"
+            android:text="Ваше Имя" />
+
+        <TextView
+            android:id="@+id/editPersonname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:fontFamily="@font/founetext"
+            android:textColor="@color/black"
+            android:inputType="textPersonName"
+            android:text="Марат"
+            android:layout_marginLeft="15dp"
+            />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:textSize="18dp"
+            android:layout_marginLeft="15dp"
+            android:text="Почта" />
+
+        <TextView
+            android:id="@+id/youremail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:fontFamily="@font/founetext"
+            android:textColor="@color/black"
+            android:inputType="textPersonName"
+            android:text="marat123@mail.ru"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="15dp"
+            android:text="Город" />
+
+        <TextView
+            android:id="@+id/yourcity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:fontFamily="@font/founetext"
+            android:textColor="@color/black"
+            android:inputType="textPersonName"
+            android:text="Астана"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="15dp"
+            android:text="Телефон номер" />
+
+        <TextView
+            android:id="@+id/yournumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:textColor="@color/black"
+            android:inputType="textPersonName"
+            android:fontFamily="@font/founetext"
+            android:text="87771877054"
+            android:layout_marginLeft="15dp"/>
+
+
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
