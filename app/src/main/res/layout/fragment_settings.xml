@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsFragment"
+    android:background="@color/mainorange">
+
+
+    <ImageView
+        android:id="@+id/backButtonFromSettings"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/buttonback"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/settingBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/founetext"
+        android:text="Настройки"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/backButtonFromSettings"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/syzyk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/syzyk"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imagePhotoSettings"
+                android:layout_width="55dp"
+                android:layout_height="59dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/profile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/nameFromSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/founetext"
+                android:text="Марат Койшыбек"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imagePhotoSettings"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/wordMotivator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/poppinslight"
+                android:text="Учи, учи и снова учи!"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/imagePhotoSettings"
+                app:layout_constraintTop_toBottomOf="@+id/nameFromSettings" />
+
+            <ImageView
+                android:id="@+id/line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/wordMotivator" />
+
+            <ImageView
+                android:id="@+id/imageAccount"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/group"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line" />
+
+            <TextView
+                android:id="@+id/account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="4dp"
+                android:textSize="18dp"
+                android:fontFamily="@font/founetext"
+                android:text="Аккаунт"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/imageAccount"
+                app:layout_constraintTop_toTopOf="@+id/imageAccount" />
+
+            <TextView
+                android:id="@+id/textSafety"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Приватность, Безоапасность"
+                app:layout_constraintBottom_toBottomOf="@+id/imageAccount"
+                app:layout_constraintEnd_toEndOf="@+id/account"
+                android:textSize="13sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/account"
+                app:layout_constraintTop_toBottomOf="@+id/account"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/imageNotification"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/notification"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageAccount" />
+
+            <TextView
+                android:id="@+id/notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="4dp"
+                android:textSize="18dp"
+                android:fontFamily="@font/founetext"
+                android:text="Уводомление"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/imageNotification"
+                app:layout_constraintTop_toTopOf="@+id/imageNotification" />
+
+            <TextView
+                android:id="@+id/textSms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сообщение, группы и другие"
+                app:layout_constraintBottom_toBottomOf="@+id/imageNotification"
+                app:layout_constraintEnd_toEndOf="@+id/notification"
+                android:textSize="13sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/notification"
+                app:layout_constraintTop_toBottomOf="@+id/notification"
+                app:layout_constraintVertical_bias="0.0"/>
+
+            <ImageView
+                android:id="@+id/imageHelp"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/help"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageNotification" />
+
+            <TextView
+                android:id="@+id/help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="4dp"
+                android:textSize="18dp"
+                android:fontFamily="@font/founetext"
+                android:text="Помощь"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/imageHelp"
+                app:layout_constraintTop_toTopOf="@+id/imageHelp" />
+
+            <TextView
+                android:id="@+id/textHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Поддержка, Контакты"
+                app:layout_constraintBottom_toBottomOf="@+id/imageHelp"
+                app:layout_constraintEnd_toEndOf="@+id/help"
+                android:textSize="13sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/help"
+                app:layout_constraintTop_toBottomOf="@+id/help"
+                app:layout_constraintVertical_bias="0.0"/>
+
+            <ImageView
+                android:id="@+id/imageLanguage"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/language"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageHelp" />
+
+            <TextView
+                android:id="@+id/language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="4dp"
+                android:textSize="18dp"
+                android:fontFamily="@font/founetext"
+                android:text="Язык"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/imageLanguage"
+                app:layout_constraintTop_toTopOf="@+id/imageLanguage" />
+
+            <TextView
+                android:id="@+id/textLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Изменить язык"
+                app:layout_constraintBottom_toBottomOf="@+id/imageLanguage"
+                app:layout_constraintEnd_toEndOf="@+id/language"
+                android:textSize="13sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/language"
+                app:layout_constraintTop_toBottomOf="@+id/language"
+                app:layout_constraintVertical_bias="0.0"/>
+
+            <ImageView
+                android:id="@+id/imageAboutUs"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/aboutus"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageLanguage" />
+
+            <TextView
+                android:id="@+id/aboutUs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="4dp"
+                android:textSize="18dp"
+                android:fontFamily="@font/founetext"
+                android:text="Про Нас "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/imageAboutUs"
+                app:layout_constraintTop_toTopOf="@+id/imageAboutUs" />
+
+            <TextView
+                android:id="@+id/textAboutUs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Про приложение"
+                app:layout_constraintBottom_toBottomOf="@+id/imageAboutUs"
+                app:layout_constraintEnd_toEndOf="@+id/aboutUs"
+                android:textSize="13sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/aboutUs"
+                app:layout_constraintTop_toBottomOf="@+id/aboutUs"
+                app:layout_constraintVertical_bias="0.0"/>
+
+            <ImageView
+                android:id="@+id/imageAboutUs2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/imageaboutus2"
+                app:layout_constraintBottom_toBottomOf="@+id/imageAboutUs"
+                app:layout_constraintEnd_toEndOf="@+id/imageAboutUs"
+                app:layout_constraintStart_toStartOf="@+id/imageAboutUs"
+                app:layout_constraintTop_toTopOf="@+id/imageAboutUs" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

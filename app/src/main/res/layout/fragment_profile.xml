@@ -7,7 +7,7 @@
     android:background="@color/mainorange"
     tools:context=".ui.fragments.ProfileFragment">
     <ImageView
-        android:id="@+id/profilebackbutton"
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -234,10 +234,5 @@
             android:fontFamily="@font/founetext"
             android:text="87771877054"
             android:layout_marginLeft="15dp"/>
-
-
-
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
