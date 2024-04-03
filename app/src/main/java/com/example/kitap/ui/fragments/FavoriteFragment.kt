@@ -5,16 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.kitap.databinding.FragmentLoginBinding
-import com.example.kitap.databinding.FragmentProfileBinding
+import com.example.kitap.R
 
-class ProfileFragment: Fragment(){
-    private lateinit var binding: FragmentProfileBinding
+class FavoriteFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentProfileBinding.inflate(layoutInflater,container,false)
-        return binding.root
+        return inflater.inflate(R.layout.fragment_favorite, container, false)
     }
 }
