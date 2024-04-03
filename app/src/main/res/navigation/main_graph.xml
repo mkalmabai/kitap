@@ -36,6 +36,12 @@
         <action
             android:id="@+id/action_profileFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_orderFragment"
+            app:destination="@id/orderFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_changeProfileFragment"
+            app:destination="@id/changeProfileFragment" />
     </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
@@ -49,7 +55,26 @@
         tools:layout="@layout/fragment_add_product" />
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.example.kitap.SettingsFragment"
+        android:name="com.example.kitap.ui.fragments.SettingsFragment"
         android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderFragment"
+        android:name="com.example.kitap.ui.fragments.OrderFragment"
+        android:label="fragment_order"
+        tools:layout="@layout/fragment_order" />
+    <fragment
+        android:id="@+id/changeProfileFragment"
+        android:name="com.example.kitap.ui.fragments.ChangeProfileFragment"
+        android:label="fragment_change_profile"
+        tools:layout="@layout/fragment_change_profile" />
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.kitap.ui.fragments.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
 </navigation>

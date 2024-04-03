@@ -28,5 +28,11 @@ class ProfileFragment: Fragment(){
         binding.settingsButton.setOnClickListener {
             findNavController().navigate(R.id.action_profileFragment_to_settingsFragment)
         }
+        binding.yourOrders.setOnClickListener {
+            findNavController().navigate(R.id.action_profileFragment_to_orderFragment)
+        }
+        binding.changeProfileButton.setOnClickListener {
+            findNavController().navigate(R.id.action_profileFragment_to_changeProfileFragment)
+        }
     }
 }
