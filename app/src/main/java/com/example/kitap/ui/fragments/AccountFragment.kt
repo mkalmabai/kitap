@@ -5,16 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.kitap.R
-import dagger.hilt.android.AndroidEntryPoint
+import com.example.kitap.databinding.FragmentAccountBinding
 
 
-
-class HomeFragment : Fragment() {
+class AccountFragment : Fragment() {
+    private lateinit var binding: FragmentAccountBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        binding = FragmentAccountBinding.inflate(layoutInflater,container,false)
+        return binding.root
     }
+
 }
