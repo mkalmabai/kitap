@@ -1,4 +1,4 @@
-package com.example.kitap
+package com.example.kitap.di
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
