@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.kitap.R
 import com.example.kitap.databinding.FragmentProfileBinding
 import com.example.kitap.databinding.FragmentSettingsBinding
 
@@ -24,6 +25,9 @@ class SettingsFragment : Fragment() {
 
         binding.backButtonFromSettings.setOnClickListener {
             findNavController().navigateUp()
+        }
+        binding.account.setOnClickListener {
+            findNavController().navigate(R.id.action_settingsFragment_to_accountFragment)
         }
     }
 }
