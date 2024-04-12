@@ -11,46 +11,44 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.example.kitap.databinding.FragmentRegistrationBinding
+import com.example.kitap.databinding.FragmentAuthBinding
 import com.example.kitap.ui.activites.MainActivity
-import com.example.kitap.ui.fragments.registration.RegistrationViewModel
+import com.example.kitap.ui.fragments.auth.AuthViewModel
 import com.example.kitap.utils.Resource
 import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
-class RegistrationFragment : Fragment() {
-    private lateinit var binding: FragmentRegistrationBinding
-    private val registrationViewModel: RegistrationViewModel by viewModels()
+class AuthFragment : Fragment() {
+    private lateinit var binding: FragmentAuthBinding
+    private val authViewModel: AuthViewModel by viewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentRegistrationBinding.inflate(layoutInflater, container, false)
+        binding = FragmentAuthBinding.inflate(layoutInflater, container, false)
         setupViews()
-        registrationWithGoogle()
+        authWithGoogle()
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
             super.onViewCreated(view, savedInstanceState)
-        registrationViewModel.setGoogleSignInLauncher(registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        authViewModel.setGoogleSignInLauncher(registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == RESULT_OK) {
                 val data: Intent? = result.data
-                registrationViewModel.handleGoogleSignInResult(data)
+                authViewModel.handleGoogleSignInResult(data)
             }
         })
 
      }
     private fun setupViews() {
-        binding.back.setOnClickListener {
-            findNavController().navigateUp()
-        }
+
         binding.googleSignIn.setOnClickListener{
-            registrationViewModel.signInWithGoogle(requireActivity())
+            authViewModel.signInWithGoogle(requireActivity())
         }
     }
-    private fun registrationWithGoogle() {
+    private fun authWithGoogle() {
 
-        registrationViewModel.status.observe(viewLifecycleOwner) {
+        authViewModel.status.observe(viewLifecycleOwner) {
                 status ->
             when (status) {
                 is Resource.Loading -> {

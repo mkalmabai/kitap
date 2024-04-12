@@ -1,4 +1,4 @@
-package com.example.kitap.ui.fragments.registration
+package com.example.kitap.ui.fragments.auth
 
 import android.app.Activity
 import android.content.Intent
@@ -6,6 +6,7 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.kitap.utils.Constants.Companion.GOOGLE_AUTH_KEY
 import com.example.kitap.utils.Resource
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -21,7 +22,7 @@ import kotlinx.coroutines.tasks.await
 import javax.inject.Inject
 
 @HiltViewModel
-class RegistrationViewModel
+class AuthViewModel
 @Inject
  constructor(
     private val firebaseAuth: FirebaseAuth
@@ -38,7 +39,7 @@ class RegistrationViewModel
     fun signInWithGoogle(activity:Activity) {
         _status.value = Resource.Loading()
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken("171827503043-6hcnps09krkodi6372lk1ouvtgjuqbak.apps.googleusercontent.com")
+            .requestIdToken(GOOGLE_AUTH_KEY)
             .requestEmail()
             .build()
 

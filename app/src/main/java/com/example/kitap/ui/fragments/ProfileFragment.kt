@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.kitap.R
-import com.example.kitap.databinding.FragmentLoginBinding
 import com.example.kitap.databinding.FragmentProfileBinding
 
 class ProfileFragment: Fragment(){
